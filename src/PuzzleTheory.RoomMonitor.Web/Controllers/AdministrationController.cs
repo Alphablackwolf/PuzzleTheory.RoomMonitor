@@ -22,7 +22,7 @@ namespace PuzzleTheory.RoomMonitor.Web.Controllers
                     Id = 2,
                     Name = "The little room",
                     StartMinutes = 60
-                },
+                }
             };
             return View(viewModel);
         }
