@@ -16,6 +16,7 @@ var RoomService = (function () {
         this.http = http;
     }
     RoomService.prototype.getRooms = function () {
+        //todo: setup a base path variable to be used throughout the code.
         return this.http.get('http://localhost:65298/Administration/GetRooms')
             .toPromise()
             .then(function (response) { return response.json(); })

@@ -14,6 +14,8 @@ var AdministrationPage = (function () {
     function AdministrationPage(roomService) {
         this.roomService = roomService;
     }
+    AdministrationPage.prototype.initialize = function (room) {
+    };
     AdministrationPage.prototype.getRooms = function () {
         var _this = this;
         this.roomService.getRooms().then(function (rooms) { return _this.rooms = rooms; });
@@ -23,8 +25,8 @@ var AdministrationPage = (function () {
     };
     AdministrationPage = __decorate([
         core_1.Component({
-            selector: 'my-app',
-            template: "\n        <div class=\"RoomSection\" *ngFor=\"let room of rooms\">\n            <div class=\"row\">\n                <div class=\"col-md-12\">\n                    Room {{room.name}} Time(minutes) <input [(ngModel)]=\"room.startMinutes\" /> \n                </div> \n            </div>\n        </div>",
+            selector: 'rooms',
+            template: "\n        <div class=\"RoomSection\" *ngFor=\"let room of rooms\">\n            <div class=\"row\">\n                <div class=\"col-md-6\">\n                    {{room.name}} Time(minutes) <input [(ngModel)]=\"room.startMinutes\" /> \n                </div> \n                <div class=\"col-md-6\">\n                    <button type=\"Button\" (click)=\"initialize(room)\">Initialize</button>\n                </div> \n            </div>\n        </div>",
             providers: [room_service_1.RoomService]
         }), 
         __metadata('design:paramtypes', [room_service_1.RoomService])
