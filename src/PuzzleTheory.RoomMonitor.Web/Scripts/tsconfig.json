@@ -5,7 +5,9 @@
     "removeComments": false,
     "sourceMap": true,
     "target": "es5",
-    "outDir":  "../wwwroot/scripts" 
+    "outDir": "../wwwroot/scripts/app",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true
   },
   "exclude": [
     "node_modules",

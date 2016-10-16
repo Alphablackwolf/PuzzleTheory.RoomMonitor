@@ -1,20 +1,16 @@
-﻿@model IEnumerable<PuzzleTheory.RoomMonitor.Web.Models.RoomViewModel>
+﻿@using PuzzleTheory.RoomMonitor.Web.Code
+@model IEnumerable<PuzzleTheory.RoomMonitor.Web.Models.RoomViewModel>
 @{
     ViewData["Title"] = "Administration";
 }
 
-@Html.IncludeInitialAngularBindings(Model);
+@Html.IncludeInitialAngularBindings(Model)
 
-
-<title>Puzzle Theory Room Monitor</title>
-@* Todo: send model to angular somehow? *@
 <div class="container-fluid">
-    <div class="RoomSection" *ngFor="let room of rooms; let i=index;">
-        <div class="row">
-            <div class="col-md-12">
-                Room {{room.name}} Time (minutes) 
-                <input [(ngModel)]="room.startMinutes"/>
-            </div>
-        </div>
-    </div>
+    
+    <h1>Puzzle Theory Room Monitor</h1>
+    <my-app>Loading...</my-app>
+    
+
 </div>
+
